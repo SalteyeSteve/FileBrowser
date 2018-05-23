@@ -1,0 +1,345 @@
+/*region Config*/
+/*If padding increases then size of border stays the same*/
+*{
+    box-sizing: border-box;
+}
+/*Remove outline*/
+textarea:focus, input:focus{
+    outline: none;
+}
+*:focus {
+    outline: none;
+}
+div#textEditor:focus {
+    outline: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: url("Images/bg_wood.jpg");
+    border-radius: 10px;
+}
+
+/*endregion*/
+/*region Main body style*/
+body {
+    margin: 0;
+    max-height:100%;
+    max-width: 100%;
+    background : url("Images/bg_wood.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    resize: none;
+}
+html {
+    margin: 0;
+    max-height:100%;
+    max-width: 100%;
+    background : url("Images/bg_wood.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    resize: none;
+}
+
+/*endregion*/
+/*region Divs*/
+
+/*Divs -> Text Editor*/
+div#main {
+    float: left;
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    background: transparent;
+    border: transparent;
+    padding-top: 0.5%;
+    padding-bottom: 2%;
+    padding-right: 0.5%;
+    padding-left: 0.5%;
+}
+
+div#textEditor{
+    font-family: 'Josefin Sans';
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 85%;
+    width: auto;
+    max-width: 43%;
+    float: left;
+}
+/*Divs -> Text Editor -> Text area */
+textarea {
+    font-family: Tangerine;
+    font-weight: bold;
+    font-size: 35px;
+    background: transparent;
+    padding: 2%;
+    resize: none;
+    max-width: 100%;
+    max-height: 78%;
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+/*Divs -> Text Editor -> Text editor bracket holders*/
+div#textEditorBracketRight{
+    float: right;
+    width: 25%;
+    height: 100%;
+}
+div#textEditorBracketLeft{
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+
+/*Divs -> Text Editor - Buttons> */
+div#input {
+    float: left;
+    width: 50%;
+    height: 9%;
+
+}
+
+/*Divs -> Text Reader*/
+div#text{
+    background: url("Images/bg_text.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    float: none;
+    width:100%;
+    height: 100%;
+    /*-webkit-box-shadow: 2px 2px 56px -8px rgb(53, 146, 164);*/
+    /*-moz-box-shadow: 2px 2px 56px -8px rgb(53, 146, 164);*/
+    box-shadow: 2px 2px 56px -8px rgb(53, 146, 164);
+
+}
+div#textReader {
+    font-family: Tangerine;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 1px;
+    height: 93%;
+    width: 45%;
+    float: left;
+    border-radius: 12px;
+}
+
+/*Divs -> Text Reader -> Text area*/
+div#textReaderText{
+    font-family: Tangerine;
+    font-weight: bold;
+    background: transparent;
+    font-size: 35px;
+    width: 100%;
+    padding: 2%;
+    height:83%;
+    resize: none;
+}
+
+/*Divs -> Image reader*/
+div#image{
+    height: 90%;
+    width: 90%;
+    padding: 10%;
+}
+table{
+    color: #030f0b;
+    font-family: Tangerine;
+    font-weight: bolder;
+    font-size: 180%;
+
+}
+td{
+    padding-right: 90px;
+}
+/*Divs -> File icons*/
+div#icon {
+    text-align: center;
+    float: left;
+    background-color: transparent;
+    width: 150px;
+    height: 160px;
+    margin : 5px;
+    position:relative;
+    white-space: nowrap;
+}
+div#icon2 {
+    text-align: center;
+    float: left;
+    background-color: transparent;
+    width: 40px;
+    height: 50px;
+    margin : 2px;
+    position: relative;
+    white-space: nowrap;
+}
+/*Divs -> File info */
+div#info{
+    padding: 5px;
+    background-color: rgba(186, 215, 249, 0.3);
+    display: inline-block;
+}
+
+/*Divs -> Breadcrumbs*/
+div#bread {
+    font-family: 'Josefin Sans';
+    margin: 0;
+    border-radius: 12px;
+    border: inset rgba(28, 32, 47, 0.6);
+    float: left;
+    width: 100%;
+    height: auto;
+}
+div#crumb{
+    float: left;
+    padding: 3px;
+    min-height: 4.7%;
+    height: auto;
+    width: auto;
+}
+/*endregion*/
+/*region Style*/
+/*Style ->  Link style */
+a:hover, a:visited, a:link, a:active {
+    font-family: 'Josefin Sans';
+    text-decoration: none;
+    font-size: 110%;
+    cursor: pointer;
+    color: #cdd4d7;
+    text-align: center;
+}
+/* Style ->  Link style -> Hover */
+a:hover{
+    -webkit-box-shadow: 2px 2px 56px -8px rgba(60,71,194,1);
+    -moz-box-shadow: 2px 2px 56px -8px rgba(60,71,194,1);
+    box-shadow: 2px 2px 56px -8px rgb(53, 146, 164);
+    border-radius: 12px;
+    background-color: rgba(186, 215, 249, 0.3);
+    display: block;
+    padding-top: 2px;
+}
+
+/*Style -> Link style -> Breadcrumb link style*/
+a.bread {
+
+    float: left;
+    display: inline-block;
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-top: 2px;
+}
+a.bread:hover{
+    box-shadow: 2px 2px 56px -12px rgb(53, 146, 164);
+    border-radius: 12px;
+}
+
+/*Style -> Images*/
+img.icons {
+    padding-bottom: 10px;
+}
+img.image {
+    margin: 10px;
+    width: auto;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    -webkit-box-shadow: 2px 2px 56px -8px rgb(53, 146, 164);
+    -moz-box-shadow: 2px 2px 56px -8px rgb(53, 146, 164);
+    box-shadow: 2px 2px 30px 3px rgb(3, 15, 11);
+}
+img.show{
+    height: 90%;
+    width: auto;
+    max-width: 90%;
+    max-height: 80%;
+    padding-top: 10%;
+    padding-left: 20%;
+}
+img.bread {
+    width : 35px;
+    height : 30px;
+    padding-bottom: 0;
+    padding-right: 5px;
+}
+img.text {
+    float: none;
+    opacity: 0.4;
+    max-width: 100%;
+    max-height: 100%;
+}
+/*Style -> Input buttons*/
+
+form input:hover{
+    cursor: pointer;
+}
+form input[type=submit] {
+    background: url("icons/save.png") no-repeat center center;
+    background-size: 60px, 60px;
+    min-width : 100px;
+    min-height : 70px;
+    color : transparent;
+    border : none;
+    padding-right: 10px;
+    border-radius: 20px;
+}
+form input[type=reset] {
+    background: url("icons/back.png") no-repeat center center;
+    background-size: 60px, 60px;
+    min-width : 100px;
+    min-height : 70px;
+    border-radius: 20px;
+    border : none;
+    color : transparent;
+    padding-right: 10px;
+}
+form input[type=button] {
+    background: url("icons/delete.png") no-repeat center center;
+    background-size: 48px, 48px;
+    min-width : 100px;
+    min-height : 70px;
+    border : none;
+    border-radius: 20px;
+    padding-right: 10px;
+    color : transparent;
+}
+
+/*Style -> Input buttons -> hover*/
+form input[type=button]:hover {
+    background-color: rgba(126, 85, 28, 0.3);
+    border-radius: 20px;
+}
+form input[type=reset]:hover {
+    background-color: rgba(126, 85, 28, 0.3);
+    border-radius: 20px;
+}
+form input[type=submit]:hover {
+    background-color: rgba(126, 85, 28, 0.3);
+    border-radius: 20px;
+}
+
+
+/*endregion*/

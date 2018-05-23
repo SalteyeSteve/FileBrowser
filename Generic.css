@@ -1,0 +1,422 @@
+/*region Config*/
+/*If padding increases then size of border stays the same*/
+*{
+    box-sizing: border-box;
+}
+/*Remove outline*/
+textarea:focus, input:focus{
+    outline: none;
+}
+*:focus {
+    outline: none;
+}
+div#textEditor:focus {
+    outline: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    background-color: #ff9529;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: url("Images/bg_wood.jpg");
+    border-radius: 12px;
+}
+
+/*endregion*/
+/*region Main body style*/
+    body {
+        margin: 0;
+        max-height:100%;
+        max-width: 100%;
+        background : url("Images/bg_wood.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        resize: none;
+    }
+    html {
+        margin: 0;
+        max-height:100%;
+        max-width: 100%;
+        background : url("Images/bg_wood.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        resize: none;
+    }
+
+    /*endregion*/
+/*region Divs*/
+
+#main{
+    padding: 1%;
+}
+.sticky {
+    position: fixed;
+    top: 19px;
+    width: 100%;
+    z-index: 1;
+}
+    /*Smartphones*/
+@media (min-width: 360px) {
+    #content{
+        padding-left: 6.5%;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    #iframe{
+        border-radius: 12px;
+        border: inset rgba(28, 32, 47, 0.6);
+        display: none;
+        overflow: hidden;
+    }
+
+    div#icon {
+        text-align: center;
+        /*float: left;*/
+        display: inline-grid;
+        background-color: transparent;
+        width: 80px;
+        min-height: 80px;
+        height: auto;
+        margin : 5px;
+    }
+
+    textarea {
+        height: 370px;
+        font-family: Tangerine;
+        background: transparent;
+        font-weight: bold;
+        font-size: 130%;
+        width: 100%;
+        resize: none;
+        border: none;
+        overflow: auto;
+        outline: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    table {
+        color: #030f0b;
+        font-family: Tangerine;
+        font-weight: bold;
+        font-size: 130%;
+
+    }
+
+    form input[type=submit] {
+        background: url("icons/save.png") no-repeat center center;
+        background-size: 50px, 50px;
+        min-width : 55px;
+        min-height : 55px;
+        color : transparent;
+        border : none;
+        margin-right: 5px;
+    }
+    form input[type=reset] {
+        background: url("icons/back.png") no-repeat center center;
+        background-size: 50px, 50px;
+        min-width : 55px;
+        min-height : 55px;
+        color : transparent;
+        border : none;
+        margin-right: 5px;
+    }
+    form input[type=button] {
+        background: url("icons/delete.png") no-repeat center center;
+        background-size: 50px, 50px;
+        min-width : 55px;
+        min-height : 55px;
+        color : transparent;
+        border : none;
+        margin-right: 5px;
+    }
+
+    form input[type=button]:hover {
+        background-color: rgba(126, 85, 28, 0.3);
+
+    }
+    form input[type=reset]:hover {
+        background-color: rgba(126, 85, 28, 0.3);
+
+    }
+    form input[type=submit]:hover {
+        background-color: rgba(126, 85, 28, 0.3);
+
+    }
+
+    img.icons {
+        width: 65px;
+        height: 65px;
+        padding-bottom: 2px;
+    }
+    img.bread {
+        width : 25px;
+        height : 20px;
+        padding-bottom: 0;
+        padding-right: 5px;
+    }
+
+    a:hover, a:visited, a:link, a:active {
+        font-family: 'Josefin Sans';
+        text-decoration: none;
+        cursor: pointer;
+        color: #cdd4d7;
+        font-size: 90%;
+        padding-bottom: 2px;
+    }
+    img.image {
+        margin: 5px;
+        width: auto;
+        height: 60px;
+        max-width: 60px;
+        box-shadow: 2px 2px 30px 3px rgb(3, 15, 11);
+    }
+    a {
+        text-align: center;
+        word-wrap: break-word;
+        word-break: break-all;
+        max-width: inherit;
+        white-space: pre-wrap;
+    }
+}
+
+
+
+
+    /*Desktops*/
+@media (min-width: 1200px) {
+    #iframe{
+        border-radius: 12px;
+        border: inset rgba(28, 32, 47, 0.6);
+        display: none;
+
+    }
+    #content{
+        padding-left: 0;
+    }
+
+    div#icon {
+        text-align: center;
+        /*float: left;*/
+        display: inline-grid;
+        background-color: transparent;
+        width: 140px;
+        min-height: 160px;
+        height: auto;
+        margin : 5px;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+    }
+    div#icon:hover{
+        -webkit-box-shadow: 2px 2px 56px -8px rgba(60,71,194,1);
+        -moz-box-shadow: 2px 2px 56px -8px rgba(60,71,194,1);
+        box-shadow: 2px 2px 56px -8px rgb(53, 146, 164);
+        border-radius: 12px;
+        background-color: rgba(186, 215, 249, 0.3);
+    }
+
+    img.bread {
+        width : 35px;
+        height : 30px;
+        padding-right: 5px;
+    }
+
+    textarea {
+        height: 550px;
+        font-family: Tangerine;
+        background: transparent;
+        font-weight: bolder;
+        font-size: 180%;
+        width: 100%;
+        resize: none;
+        border: none;
+        overflow: auto;
+        outline: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    table {
+        color: #030f0b;
+        font-family: Tangerine;
+        font-weight: bolder;
+        font-size: 180%;
+
+    }
+
+    form input[type=submit] {
+        background: url("icons/save.png") no-repeat center center;
+        background-size: 100px, 95px;
+        min-width: 120px;
+        min-height: 90px;
+        color: transparent;
+        border: none;
+        padding-right: 10px;
+        border-radius: 20px;
+    }
+    form input[type=reset] {
+        background: url("icons/back.png") no-repeat center center;
+        background-size: 90px, 85px;
+        min-width: 120px;
+        min-height: 90px;
+        color: transparent;
+        border: none;
+        padding-right: 10px;
+        border-radius: 20px;
+    }
+    form input[type=button] {
+        background: url("icons/delete.png") no-repeat center center;
+        background-size: 100px, 95px;
+        min-width: 120px;
+        min-height: 90px;
+        color: transparent;
+        border: none;
+        padding-right: 10px;
+        border-radius: 20px;
+    }
+
+    form input[type=button]:hover {
+        background-color: rgba(126, 85, 28, 0.3);
+        border-radius: 20px;
+    }
+    form input[type=reset]:hover {
+        background-color: rgba(126, 85, 28, 0.3);
+        border-radius: 20px;
+    }
+    form input[type=submit]:hover {
+        background-color: rgba(126, 85, 28, 0.3);
+        border-radius: 20px;
+    }
+
+    img.icons {
+        width: 110px;
+        height: 110px;
+        padding-bottom: 10px;
+    }
+
+    a:hover, a:visited, a:link, a:active {
+        font-family: 'Josefin Sans';
+        text-decoration: none;
+        cursor: pointer;
+        color: #cdd4d7;
+        font-size: 110%;
+    }
+    img.image {
+        margin: 10px;
+        width: auto;
+        height: 100px;
+        max-width: 100px;
+        box-shadow: 2px 2px 30px 3px rgb(3, 15, 11);
+    }
+
+}
+
+
+
+
+    #hiddenDiv{
+    border-radius: 12px;
+    border: inset rgba(28, 32, 47, 0.6);
+    /*display: none;*/
+    position: fixed;
+}
+
+    td{
+        padding-right: 5%;
+    }
+    div#image{
+    height: 90%;
+    width: 90%;
+    padding: 10%;
+}
+    div#text{
+        background: url("Images/bg_text.jpg")no-repeat center center;
+        background-size: cover;
+    }
+    div#info{
+        padding: 5px;
+        background-color: rgba(186, 215, 249, 0.3);
+        display: inline-block;
+    }
+    div#bread {
+        font-family: 'Josefin Sans';
+        margin-bottom: 5px;
+        border-radius: 12px;
+        border: inset rgba(28, 32, 47, 0.6);
+        float: left;
+        width: 100%;
+        height: auto;
+        background: url("Images/bg_wood.jpg");
+        background-size: cover;
+    }
+    div#crumb{
+            float: left;
+            padding: 3px;
+            min-height: 4.7%;
+            height: auto;
+            width: auto;
+        }
+    div#label{
+        background-image: url("Images/bg_text_plain.png");
+        background-size: cover;
+    }
+/*endregion*/
+
+/*region Style*/
+
+    form input:hover{
+        cursor: pointer;
+    }
+
+    a.bread {
+            text-align: center;
+            float: left;
+            display: inline-block;
+            padding-right: 4px;
+            padding-left: 4px;
+            padding-top: 2px;
+        }
+    a.bread:hover{
+        box-shadow: 2px 2px 56px -12px rgb(12, 33, 40);
+        background-color: rgba(53, 146, 164, 0.3);
+        border-radius: 12px;
+    }
+    a.show{
+        font-family: 'Josefin Sans';
+        text-decoration: none;
+        font-size: 110%;
+        cursor: pointer;
+        color: #cdd4d7;
+        box-shadow: none;
+    }
+    a.show:hover {
+        background-color: transparent;
+        border: none;
+    }
+
+    img#show{
+        padding: 5px;
+        max-width: 100%;
+        max-height: 100%;
+        overflow: hidden;
+    }
+
+
+/*endregion*/
